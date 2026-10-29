@@ -68,4 +68,7 @@ def view_tasks():
         for i, task in enumerate[Any](tasks,start=1):
             print(f"{i}. {task['test']} - {'✓' if task['done'] else '✗'}
 
- 
+def delete_task(tasks):
+    view_tasks(tasks)
+    choice = input("введи номер завдання для видалення ")
+    tasks.pop(choice - 1)
