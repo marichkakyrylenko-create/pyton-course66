@@ -43,3 +43,9 @@ def login_gate(master_password):
     else:
         return False
         
+def show_menu():
+    print("1) Додати завдання \n2) Переглянути завдання \n3) Видалити завдання \n4) Вийти")
+    if input("Ваш вибір: ") 
+        if choice == "1":
+
+        elif choice == "2":
