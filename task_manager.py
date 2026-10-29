@@ -1,4 +1,7 @@
+from asyncio import tasks
 import random
+
+from hw2 import choice
 
 def generate_password(length):
     characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%"
@@ -49,3 +52,20 @@ def show_menu():
         if choice == "1":
             add_task()
         elif choice == "2": 
+            view tasks()
+        elif choice=="3" :
+            delete task(tasks)
+        else:
+            break
+
+def add_task(tasks):
+    choice = input("введи назву завдання")
+    tasks.append({"text": choice, "done": False})
+
+def view_tasks():
+    if not tasks:
+        print("\Список завдань:")
+        for i, task in enumerate[Any](tasks,start=1):
+            print(f"{i}. {task['test']} - {'✓' if task['done'] else '✗'}
+
+ 
