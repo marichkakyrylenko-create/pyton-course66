@@ -48,4 +48,4 @@ def show_menu():
     if input("Ваш вибір: ") 
         if choice == "1":
             add_task()
-        elif choice == "2":
+        elif choice == "2": 
