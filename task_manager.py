@@ -47,5 +47,5 @@ def show_menu():
     print("1) Додати завдання \n2) Переглянути завдання \n3) Видалити завдання \n4) Вийти")
     if input("Ваш вибір: ") 
         if choice == "1":
-
+            add_task()
         elif choice == "2":
