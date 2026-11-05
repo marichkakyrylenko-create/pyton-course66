@@ -28,6 +28,23 @@ def check_password_strength(password):
     else:
         return "слабкий"
 
+def mark_task_done(tasks):
+
+    if len(tasks) == 0:
+        print("Список завдань порожній.")
+        return
+    view_tasks(tasks)
+    number = input("Введи номер виконаного завдання: ")
+    if not number.isdigit():
+        print("Потрібно ввести число.")
+        return
+    number = int(number)
+    if number < 1 or number > len(tasks):
+        print("Немає завдання з таким номером.")
+        return
+    tasks[number - 1]["done"] = True
+    print("Завдання позначено виконаним:", tasks[number - 1]["text"])
+
 def set_master_password():
     while True:
         password = input("Введи пароль: ")
@@ -55,6 +72,8 @@ def show_menu():
             view tasks()
         elif choice=="3" :
             delete task(tasks)
+         elif choice=="4" :        
+            mark_task_done(tasks)
         else:
             break
 
